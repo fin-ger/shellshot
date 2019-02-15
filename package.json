@@ -1,0 +1,16 @@
+{
+    "name": "shellshot",
+    "version": "0.1.0",
+    "description": "A command-line interface testing extension for jest",
+    "main": "index.js",
+    "dependencies": {
+        "jest": "^24.1.0",
+        "stream-to-string": "^1.2.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "jest --coverage"
+    },
+    "author": "Fin Christensen",
+    "license": "GPL-3.0-or-later"
+}
