@@ -72,9 +72,9 @@ it(
 it(
     'tests if withCwd sets the correct working directory',
     async () => {
-        await expect.command('../scripts/cwd.sh')
+        await expect.command('pwd')
             .withCwd('./src/')
-            .forStdout(expectation => expectation.toBe('../src\n'));
+            .forStdout(expectation => expectation.toContain('src'));
     }
 )
 
