@@ -3,10 +3,10 @@ const { setup } = require('shellshot');
 setup();
 
 it(
-    'runs cat --help and matches snapshot',
+    'runs cat --help and checks if cat is contained',
     async () => {
         await expect.command('cat --help')
-            .forStdout(expectation => expectation.toMatchSnapshot());
+            .forStdout(expectation => expectation.toContain(' cat '));
     },
 );
 
