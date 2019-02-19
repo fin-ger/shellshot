@@ -12,5 +12,5 @@
         "test": "jest --coverage"
     },
     "author": "Fin Christensen",
-    "license": "GPL-3.0-or-later"
+    "license": "BSD-3-Clause-Attribution"
 }

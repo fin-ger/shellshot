@@ -76,7 +76,7 @@ it(
             .withCwd('./src/')
             .forStdout(expectation => expectation.toContain('src'));
     }
-)
+);
 
 it(
     'tests if CommandExpectation can handle invalid constructor arguments',
