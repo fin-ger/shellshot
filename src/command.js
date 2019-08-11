@@ -93,7 +93,7 @@ class CommandExpectationBuilder {
     constructor(commandLine) {
         this._commandLine = commandLine;
         this._cwd = '.';
-        this._env = {};
+        this._env = process.env;
         this._stdinLines = [];
     }
 
@@ -137,11 +137,10 @@ class CommandExpectationBuilder {
      *          stdout, stderr, and the exit code.
      */
     _build() {
-        const args = this._commandLine.split(' ');
-        const command = args.shift();
-        const proc = spawn(command, args, {
+        const proc = spawn(this._commandLine, [], {
             cwd: this._cwd,
             env: this._env,
+            shell: true,
         });
 
         const onExit = new Promise((resolve, reject) => {
